@@ -440,9 +440,12 @@ body {
 
 }
 
-.item:hover::after {
+.item:hover::after,
+.item:active::after {
     transform: scale(2) translateX(0%) translateY(0%) rotate(-28deg)
 }
+
+
 
 .item:hover .item-image {
     transform: scale(1.2);
