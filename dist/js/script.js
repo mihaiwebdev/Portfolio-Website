@@ -11,8 +11,10 @@ const message = document.getElementById('message');
 const navbar = document.querySelector('.navbar');
 const aboutLogos = document.querySelectorAll('.logo-skill');
 const navMobile = document.querySelector('.navbar-mobile');
-const mobileUl = document.querySelector('.navbar-mobile ul');
+const mobileUl = document.querySelector('.mobile-ul');
 const logos = document.querySelectorAll('.logos img');
+const navLogo = document.querySelector('.logo');
+const navUl = document.querySelector('.nav-ul');
 
 
 
@@ -184,9 +186,14 @@ window.addEventListener('scroll', () => {
 
 
 // Navbar
+window.onload = () => {
+    navLogo.classList.add('show');
+    navUl.classList.add('show');
+    navMobile.classList.add('scale')
+}
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > 800 && scrollTop < lastScrollTop) {
+    if (scrollTop > 500 && scrollTop < lastScrollTop) {
         navbar.classList.add('small');
     } else {
         if (navbar.classList.contains('small')) {
@@ -205,6 +212,7 @@ navMobile.addEventListener('click', () => {
     mobileUl.classList.toggle('show');
 
 })
+
 
 
 
