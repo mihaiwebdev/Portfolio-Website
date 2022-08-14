@@ -291,6 +291,7 @@ body {
     margin-top: 50px;
     transform: translateX(-1000px);
     animation: animate-btn 1s 0.5s forwards ease-in-out;
+
 }
 
 @keyframes animate-btn {
@@ -405,7 +406,6 @@ body {
 }
 
 .item {
-
     overflow: hidden;
     position: relative;
     height: 340px;
@@ -440,8 +440,7 @@ body {
 
 }
 
-.item:hover::after,
-.item:active::after {
+.item:hover::after {
     transform: scale(2) translateX(0%) translateY(0%) rotate(-28deg)
 }
 
@@ -533,7 +532,7 @@ body {
 
 }
 
-.item-text-wrap a:first-of-type {}
+
 
 .item:hover .item-text-wrap a {
     transform: translateX(-50%);
@@ -973,7 +972,7 @@ body {
 }
 
 #form .btn:hover {
-    background-color: var(--secondary-color);
+
     transform: scale(0.98);
 }
 
@@ -1248,11 +1247,19 @@ body {
 
     .mobile-ul {
         display: none;
+
+
     }
+
 
     .mobile-ul li {
         padding: 9px;
         z-index: 2;
+
+    }
+
+    .mobile-ul li a {
+        font-size: 1.2rem;
     }
 
 
@@ -1270,6 +1277,8 @@ body {
         padding: 15px 0;
         z-index: 1;
 
+
+
     }
 
     @keyframes shownav {
@@ -1281,19 +1290,6 @@ body {
             transform: translateY(0px);
         }
 
-
-
-        25% {
-            background: blue;
-
-        }
-
-        50% {
-
-
-            background: blueviolet;
-        }
-
     }
 
     .navbar-mobile ul.show::before {
@@ -1303,11 +1299,11 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(var(--main-color), var(--secondary-color));
-        border-radius: 5px 5px 20px 20px;
+        background: linear-gradient(var(--secondary-color), var(--main-color));
+        border-radius: 0px 0px 20px 20px;
         padding: 10px 0;
-        opacity: 0.98;
-        z-index: 1;
+        opacity: 0.95;
+        z-index: 2;
     }
 
     .navbar.small {
@@ -1344,6 +1340,7 @@ body {
 
     .navbar.small .navbar-mobile li {
         padding: 10px;
+
     }
 
     .header-home .header-content {
@@ -1380,6 +1377,19 @@ body {
         margin-bottom: 15px;
         width: 100%;
         height: 300px;
+    }
+
+    .item:hover::after,
+    .item:active::after,
+    .item:focus::after {
+        transform: scale(2) translateX(0%) translateY(0%) rotate(-28deg)
+    }
+
+    .item:hover .item-text,
+    .item:active .item-text,
+    .item:focus .item-text {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .work-2 {
