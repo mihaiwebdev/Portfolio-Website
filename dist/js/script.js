@@ -192,6 +192,7 @@ window.onload = () => {
     navMobile.classList.add('show');
     switchTheme.classList.add('show');
 }
+
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > 800 && scrollTop < lastScrollTop) {

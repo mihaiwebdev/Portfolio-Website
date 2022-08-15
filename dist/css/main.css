@@ -457,7 +457,8 @@ body {
 
 }
 
-@media(hover: hover) {
+
+@media(hover: hover) and (pointer: fine) {
     .item:hover::after {
         transform: scale(2) translateX(0%) translateY(0%) rotate(-28deg)
     }
@@ -1488,7 +1489,8 @@ body {
     }
 
     .work-3 {
-        background-position: 1px;
+        background-position: 1px 1px;
+
     }
 
     .work-1 {
