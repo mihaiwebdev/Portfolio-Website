@@ -1,4 +1,5 @@
 const workHeading = document.getElementById('work-heading');
+const workDiv = document.querySelector('.items');
 const workItems = document.querySelectorAll('.item');
 const aboutHeading = document.querySelector('.about-heading');
 const aboutA = document.querySelector('.about-a');
@@ -15,7 +16,7 @@ const mobileUl = document.querySelector('.mobile-ul');
 const logos = document.querySelectorAll('.logos img');
 const navLogo = document.querySelector('.logo');
 const navUl = document.querySelector('.nav-ul');
-
+const switchTheme = document.querySelector('.switch-mode');
 
 
 
@@ -36,8 +37,6 @@ function removeNav(nav) {
         navMobile.classList.toggle('close');
     }
 }
-
-
 
 
 
@@ -88,6 +87,7 @@ function showAwardsElements(el) {
         }
     })
 }
+
 
 
 
@@ -189,11 +189,12 @@ window.addEventListener('scroll', () => {
 window.onload = () => {
     navLogo.classList.add('show');
     navUl.classList.add('show');
-    navMobile.classList.add('scale')
+    navMobile.classList.add('show');
+    switchTheme.classList.add('show');
 }
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > 500 && scrollTop < lastScrollTop) {
+    if (scrollTop > 800 && scrollTop < lastScrollTop) {
         navbar.classList.add('small');
     } else {
         if (navbar.classList.contains('small')) {
@@ -210,8 +211,22 @@ window.addEventListener('scroll', () => {
 navMobile.addEventListener('click', () => {
     navMobile.classList.toggle('close');
     mobileUl.classList.toggle('show');
+})
+
+
+// Work items for mobile
+workDiv.addEventListener('click', (e) => {
+    if (e.target.parentElement.classList.contains('inner-card')) {
+        e.target.parentElement.parentElement.classList.toggle('show-mob-text');
+
+    } if (e.target.parentElement.classList.contains('item-text-wrap')) {
+        e.target.parentElement.parentElement.parentElement.parentElement.classList.toggle('show-mob-text')
+    } if (e.target.parentElement.classList.contains('item-text')) {
+        e.target.parentElement.parentElement.parentElement.classList.toggle('show-mob-text')
+    }
 
 })
+
 
 
 
