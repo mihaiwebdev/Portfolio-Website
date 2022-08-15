@@ -516,7 +516,8 @@ body {
 
 }
 
-@media(hover:hover) {
+
+@media(hover:hover) and (pointer: fine) {
 
 
     .item:hover .item-text {
@@ -533,6 +534,7 @@ body {
     }
 
 }
+
 
 .item-text-wrap {
     width: 100%;
