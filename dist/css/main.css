@@ -899,6 +899,7 @@ body {
     font-size: 16px;
     box-shadow: var(--mainShadowBg) 0px 25px 20px -20px;
     z-index: 2;
+    color: var(--mainTextColor);
 
 }
 
@@ -931,11 +932,23 @@ body {
     border-radius: 10px;
     background: var(--mainBorderColor);
     font-size: 16px;
-    color: #333;
+    color: var(--mainTextColor);
     font-family: 'Dosis', 'sans-serif';
     box-shadow: var(--mainShadowBg) 0px 25px 20px -20px;
     z-index: 2;
 
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px var(--mainBorderColor) inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--mainTextColor) !important;
 }
 
 .label::before {
@@ -952,12 +965,11 @@ body {
 
 #form input:focus {
     border: 2px solid var(--secondary-color);
-
 }
 
 #form input:focus+.label {
     top: -3px;
-    color: var(--secondary-color);
+    color: var(--secondaryTextColor);
     font-size: 14px;
     font-weight: bold;
 }
@@ -965,21 +977,21 @@ body {
 
 #form .message:focus+.label {
     top: -13px;
-    color: var(--secondary-color);
+    color: var(--secondaryTextColor);
     font-size: 14px;
     font-weight: bold;
 }
 
 .label.msg-filled {
     top: -13px;
-    color: var(--secondary-color);
+    color: var(--mainTextColor);
     font-size: 14px;
     font-weight: bold;
 }
 
 .filled {
     top: -3px;
-    color: var(--secondary-color);
+    color: var(--mainTextColor);
     font-size: 14px;
     font-weight: bold;
 }
