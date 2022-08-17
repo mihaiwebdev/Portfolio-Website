@@ -207,7 +207,6 @@ body {
 
 /* Small nav */
 .navbar.small {
-    overflow: hidden;
     width: 100%;
     background: url('../images/image1.jpg') no-repeat 20% 30% /cover;
     position: fixed;
@@ -487,18 +486,22 @@ body {
 }
 
 .work-1 {
-    background: url('../images/work-manage-1.jpg')no-repeat center /cover;
+    background: url('../images/work-manage-1-cut.jpg')no-repeat center /cover;
     background-position: 1px;
 }
 
 .work-2 {
-    background: url('../images/work-spacenews1.jpg')no-repeat center /cover;
+    background: url('../images/work-spacenews1-cut.jpg')no-repeat center /cover;
 
 }
 
 .work-3 {
-    background: url('../images/shopping-ss.jpg')no-repeat 0% 0% /cover;
+    background: url('../images/shopping-ss-cut.jpg')no-repeat 0% 0% /cover;
 
+}
+
+.work-4 {
+    background: url('../images/breakoutgame.jpg')no-repeat center 0% /cover;
 }
 
 .item-text {
@@ -561,10 +564,11 @@ body {
     color: #fff;
     border-bottom: 1px solid #fff;
     transition: color 0.5s, border-color 0.5s, transform 1s cubic-bezier(0.2, 1, 0.3, 1);
-
-
 }
 
+.item-text-wrap a:last-of-type {
+    bottom: -35px;
+}
 
 .item-text-wrap a:hover {
     color: #333;
@@ -1239,6 +1243,7 @@ input:-webkit-autofill {
     .navbar .logo img {
         width: 70px;
         height: 50px;
+
     }
 
     .navbar-mobile {
@@ -1256,12 +1261,14 @@ input:-webkit-autofill {
         opacity: 0;
         transition: opacity 0.8s ease, width 0.6s ease, height 0.6s ease;
 
+
     }
 
     .navbar-mobile.show {
         opacity: 1;
         width: 40px;
         height: 40px;
+
 
     }
 
@@ -1306,49 +1313,43 @@ input:-webkit-autofill {
     }
 
 
-    .mobile-ul {
-        display: none;
-    }
+    .navbar .mobile-ul {
 
-
-    .mobile-ul li {
-        padding: 9px;
-        z-index: 2;
-    }
-
-    .mobile-ul li a {
-        font-size: 1.2rem;
-    }
-
-
-    .mobile-ul.show {
         position: absolute;
         list-style: none;
         display: flex;
         flex-direction: column;
-        top: 75px;
-        left: 5%;
+        top: 0px;
+        left: 0;
         align-items: center;
-        width: 90%;
-        border-radius: 5px 5px 10px 10px;
-        animation: shownav 0.6s ease;
-        padding: 15px 0;
-        z-index: 1;
+        justify-content: center;
+        width: 100%;
+        border-radius: 0px 0px 15px 15px;
+        padding-top: 70px;
+        z-index: -1;
+        transform: translateY(-500px);
+        transition: transform 0.5s ease;
+        height: 45vh;
 
     }
 
-    @keyframes shownav {
-        from {
-            transform: translateY(-280px);
-        }
 
-        to {
-            transform: translateY(0px);
-        }
-
+    .mobile-ul li {
+        padding: 15px;
+        z-index: 2;
     }
 
-    .navbar-mobile .mobile-ul.show::before {
+    .mobile-ul li a {
+        font-size: 1.3rem;
+    }
+
+
+    .navbar .mobile-ul.show {
+        transform: translateY(0);
+    }
+
+
+    .navbar-mobile .mobile-ul::before {
         content: '';
         position: absolute;
         top: 0;
@@ -1356,9 +1357,9 @@ input:-webkit-autofill {
         width: 100%;
         height: 100%;
         background: linear-gradient(var(--secondary-color), var(--main-color));
-        border-radius: 0px 0px 20px 20px;
+        border-radius: 0px 0px 15px 15px;
         padding: 10px 0;
-        opacity: 0.95;
+        opacity: 0.98;
         z-index: 2;
     }
 
@@ -1372,15 +1373,20 @@ input:-webkit-autofill {
     .navbar.small .navbar-mobile {
         width: 37px;
         height: 37px;
+
     }
 
     .navbar.small li a {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+
     }
 
-    .navbar.small .navbar-mobile ul.show {
-        position: fixed;
-        top: 65px;
+    .navbar.small .mobile-ul {
+        height: 40vh;
+    }
+
+    .navbar.small .mobile-ul.show {
+        transform: translateY(0);
 
     }
 
@@ -1394,7 +1400,7 @@ input:-webkit-autofill {
     }
 
     .navbar.small .navbar-mobile li {
-        padding: 10px;
+        padding: 15px;
 
     }
 

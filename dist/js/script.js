@@ -211,7 +211,12 @@ window.addEventListener('scroll', () => {
 // Navbar Mobile
 navMobile.addEventListener('click', () => {
     navMobile.classList.toggle('close');
-    mobileUl.classList.toggle('show');
+    if (navMobile.classList.contains('close')) {
+        mobileUl.classList.add('show')
+    } else {
+        mobileUl.classList.remove('show')
+    }
+
 })
 
 
