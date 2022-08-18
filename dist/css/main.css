@@ -1631,3 +1631,27 @@ input:-webkit-autofill {
 
 
 }
+
+@media(max-height: 760px) and (max-width:400px) {
+    .navbar .logo img {
+        width: 58px;
+        height: 40px;
+    }
+
+    .switch-mode.show {
+        transform: scale(1);
+    }
+
+    .mobile-ul li a {
+        font-size: 1rem;
+    }
+
+    .navbar-mobile.show {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar.small .navbar-mobile li a {
+        font-size: 1rem;
+    }
+}
