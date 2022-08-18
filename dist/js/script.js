@@ -1,8 +1,11 @@
-const workHeading = document.getElementById('work-heading');
+const workHeading = document.querySelector('.work-heading');
+const workTitle = document.querySelector('.section-title');
+const lead = document.querySelector('.lead');
 const workDiv = document.querySelector('.items');
 const workItems = document.querySelectorAll('.item');
 const aboutHeading = document.querySelector('.about-heading');
 const aboutA = document.querySelector('.about-a');
+const educationTitle = document.querySelector('.about-b-title');
 const awards = document.querySelectorAll('.award');
 const aboutC = document.querySelector('.about-c');
 const contactHeading = document.querySelector('.contact-heading');
@@ -17,6 +20,7 @@ const logos = document.querySelectorAll('.logos img');
 const navLogo = document.querySelector('.logo');
 const navUl = document.querySelector('.nav-ul');
 const switchTheme = document.querySelector('.switch-mode');
+const footer = document.getElementById('main-footer');
 
 
 
@@ -47,22 +51,34 @@ function removeNav(nav) {
 function showDOMElements(el) {
     if (el >= workHeading.offsetTop) {
         workHeading.classList.add('show');
+        setTimeout(() => {
+            workHeading.classList.add('move');
+        }, 1000);
     }
     if (el >= aboutHeading.offsetTop) {
         aboutHeading.classList.add('show');
+        setTimeout(() => {
+            aboutHeading.classList.add('move');
+        }, 1000);
     }
 
     if (el >= aboutA.offsetTop) {
         aboutA.classList.add('show');
+    }
+    if (el >= educationTitle.offsetTop) {
+        educationTitle.classList.add('show');
     }
     if (el >= aboutC.offsetTop) {
         aboutC.classList.add('show');
     }
     if (el >= contactHeading.offsetTop) {
         contactHeading.classList.add('show');
+        setTimeout(() => {
+            contactHeading.classList.add('move');
+        }, 1000);
     }
     if (el >= form.offsetTop) {
-        form.classList.add('show')
+        form.classList.add('show');
     }
 };
 
