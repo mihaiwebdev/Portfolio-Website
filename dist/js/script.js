@@ -109,7 +109,7 @@ function showAwardsElements(el) {
 
 
 // Logos
-const speed = 1;
+const speed = 1.5;
 let logosArr = [
     ...logos
 ]
