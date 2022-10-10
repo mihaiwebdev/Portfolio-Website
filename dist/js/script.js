@@ -19,6 +19,7 @@ const navbar = document.querySelector('.navbar');
 const aboutLogos = document.querySelectorAll('.logo-skill');
 const navMobile = document.querySelector('.navbar-mobile');
 const mobileUl = document.querySelector('.mobile-ul');
+const hamburger = document.querySelector('.hamburger')
 const logos = document.querySelectorAll('.logos img');
 const navLogo = document.querySelector('.logo');
 const social = document.querySelector('.social');
@@ -41,7 +42,7 @@ function removeNav(nav) {
     }, 400)
     if (mobileUl.classList.contains('show')) {
         mobileUl.classList.remove('show')
-        navMobile.classList.toggle('close');
+        hamburger.classList.toggle('close');
     }
 }
 
@@ -237,7 +238,7 @@ window.onload = () => {
     navLogo.classList.add('show');
     social.classList.add('show');
     navUl.classList.add('show');
-    navMobile.classList.add('show');
+
     switchTheme.classList.add('show');
     setTimeout(() => {
         homeBtn.classList.add('show');
@@ -251,6 +252,7 @@ window.addEventListener('scroll', () => {
     } else {
         if (navbar.classList.contains('small')) {
             removeNav(navbar);
+
         }
     }
 
@@ -259,14 +261,15 @@ window.addEventListener('scroll', () => {
 }, false);
 
 // Navbar Mobile
-navMobile.addEventListener('click', () => {
-    navMobile.classList.toggle('close');
-    if (navMobile.classList.contains('close')) {
+navMobile.addEventListener('click', (e) => {
+    hamburger.classList.toggle('close')
+    if (hamburger.classList.contains('close')) {
         mobileUl.classList.add('show')
+
     } else {
         mobileUl.classList.remove('show')
     }
-
+    console.log(e.target)
 })
 
 
