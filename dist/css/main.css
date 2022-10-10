@@ -53,6 +53,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
+
 }
 
 
@@ -1490,7 +1491,7 @@ body {
         padding: 8px;
         opacity: 0;
         transition: opacity 0.8s ease, width 0.6s ease, height 0.6s ease;
-        z-index: 5;
+        /* z-index: 5; */
     }
 
     .navbar-mobile.show {
@@ -1540,7 +1541,7 @@ body {
     }
 
 
-    .navbar .mobile-ul {
+    .navbar-mobile .mobile-ul {
         position: absolute;
         list-style: none;
         display: flex;
@@ -1552,10 +1553,9 @@ body {
         width: 100%;
         border-radius: 0px 0px 15px 15px;
         padding: 30px 0px;
-        z-index: 3;
+        z-index: -1;
         transform: translateY(-500px);
         transition: transform 0.5s ease;
-        height: 40vh;
     }
 
 
@@ -1586,6 +1586,7 @@ body {
         border-radius: 0px 0px 15px 15px;
         padding: 10px 0;
         opacity: 0.98;
+        z-index: 2;
     }
 
     .navbar.small {
@@ -1879,6 +1880,14 @@ body {
 
     .navbar.small .navbar-mobile li a {
         font-size: 1rem;
+    }
+
+    .header-content {
+        margin-top: 240px;
+    }
+
+    .home-button {
+        margin-top: 0px;
     }
 
     .header-title-letter {
