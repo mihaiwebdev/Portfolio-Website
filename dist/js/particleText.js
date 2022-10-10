@@ -23,7 +23,7 @@ if (canvas.width < 630) {
     adjustY = 4;
     adjustX = 2
     ctx.fillStyle = 'white';
-    ctx.font = '18px monospace';
+    ctx.font = 'bold 18px monospace';
     ctx.fillText('hi,', 0, 18);
     mouse.x = -500
     mouse.y = 500

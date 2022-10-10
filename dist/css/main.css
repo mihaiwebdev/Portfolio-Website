@@ -53,6 +53,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 1;
 }
 
 
@@ -153,7 +154,7 @@ body {
 }
 
 .switch-theme {
-    z-index: 10;
+    z-index: 1;
     opacity: 0;
     transform: translateY(80px);
     transition: opacity 1.2s ease, transform 1.2s ease;
@@ -382,6 +383,7 @@ body {
     margin-top: 40px;
     opacity: 0;
     transition: all 1s ease;
+    z-index: 3;
 
 }
 
@@ -1183,17 +1185,6 @@ body {
     top: 10px;
 }
 
-.form-input:-webkit-autofill,
-.form-input:-webkit-autofill:hover,
-.form-input:-webkit-autofill:focus,
-.form-input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px var(--mainBorderColor) inset !important
-}
-
-.form-input:-webkit-autofill {
-    -webkit-text-fill-color: var(--mainTextColor) !important;
-}
-
 #form .form-input {
     padding: 12px;
     margin: 10px 20px 20px 0;
@@ -1491,7 +1482,7 @@ body {
         margin-bottom: 8px;
         width: 40px;
         height: 10px;
-        background-color: rgba(216, 98, 98, 0.8);
+        background-color: rgba(216, 98, 98, 0.7);
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -1500,6 +1491,7 @@ body {
         padding: 8px;
         opacity: 0;
         transition: opacity 0.8s ease, width 0.6s ease, height 0.6s ease;
+        z-index: 5;
     }
 
     .navbar-mobile.show {
@@ -1550,29 +1542,26 @@ body {
 
 
     .navbar .mobile-ul {
-
         position: absolute;
         list-style: none;
         display: flex;
         flex-direction: column;
-        top: 0px;
+        top: 87.5px;
         left: 0;
         align-items: center;
         justify-content: center;
         width: 100%;
         border-radius: 0px 0px 15px 15px;
-        padding-top: 70px;
-        z-index: -1;
+        padding: 30px 0px;
+        z-index: 3;
         transform: translateY(-500px);
         transition: transform 0.5s ease;
-        height: 45vh;
-
     }
 
 
     .mobile-ul li {
         padding: 15px;
-        z-index: 2;
+        z-index: 5;
     }
 
     .mobile-ul li a {
@@ -1593,10 +1582,11 @@ body {
         width: 100%;
         height: 100%;
         background: linear-gradient(var(--secondary-color), var(--main-color));
+        filter: drop-shadow(0 -6mm 4mm rgb(15, 134, 150));
         border-radius: 0px 0px 15px 15px;
         padding: 10px 0;
         opacity: 0.98;
-        z-index: 2;
+        z-index: 3;
     }
 
     .navbar.small {
@@ -1617,7 +1607,7 @@ body {
     }
 
     .navbar.small .mobile-ul {
-        height: 40vh;
+        top: 66px;
     }
 
     .navbar.small .mobile-ul.show {
