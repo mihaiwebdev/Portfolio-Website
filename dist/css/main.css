@@ -53,7 +53,6 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 1;
 }
 
 
@@ -193,7 +192,7 @@ body {
     top: 0;
     left: 0;
     width: 50px;
-    height: 26px;
+    height: 25px;
     background: linear-gradient(to top, #000, #555);
     border-radius: 20px;
     box-shadow: 0 0 0 1px #232323;
@@ -202,7 +201,7 @@ body {
 }
 
 .switch-theme .theme-input.switch-sun::before {
-    left: 23px;
+    left: 20px;
 }
 
 .switch-theme .theme-input::after {
@@ -218,7 +217,7 @@ body {
 }
 
 .switch-theme .theme-input.switch-sun::after {
-    left: calc(35px + 26px);
+    left: calc(30px + 26px);
     background: var(--main-color);
     box-shadow: 0 0 5px var(--main-color),
         0 0 15px var(--main-color),
@@ -1586,7 +1585,6 @@ body {
         border-radius: 0px 0px 15px 15px;
         padding: 10px 0;
         opacity: 0.98;
-        z-index: 3;
     }
 
     .navbar.small {
@@ -1876,10 +1874,6 @@ body {
     .navbar-mobile.show {
         width: 35px;
         height: 35px;
-    }
-
-    .navbar.small .mobile-ul {
-        height: 50vh;
     }
 
     .navbar.small .navbar-mobile li a {
