@@ -1,3 +1,6 @@
+const arrOne = document.querySelector('.arr-one')
+const arrTwo = document.querySelector('.arr-two')
+const homeBtn = document.querySelector('.header-content')
 const workHeading = document.querySelector('.work-heading');
 const workTitle = document.querySelector('.section-title');
 const lead = document.querySelector('.lead');
@@ -10,7 +13,7 @@ const awards = document.querySelectorAll('.award');
 const aboutC = document.querySelector('.about-c');
 const contactHeading = document.querySelector('.contact-heading');
 const form = document.querySelector('#form');
-const input = document.querySelectorAll('input');
+const input = document.querySelectorAll('.form-input');
 const message = document.getElementById('message');
 const navbar = document.querySelector('.navbar');
 const aboutLogos = document.querySelectorAll('.logo-skill');
@@ -18,10 +21,10 @@ const navMobile = document.querySelector('.navbar-mobile');
 const mobileUl = document.querySelector('.mobile-ul');
 const logos = document.querySelectorAll('.logos img');
 const navLogo = document.querySelector('.logo');
+const social = document.querySelector('.social');
 const navUl = document.querySelector('.nav-ul');
-const switchTheme = document.querySelector('.switch-mode');
+const switchTheme = document.querySelector('.switch-theme');
 const footer = document.getElementById('main-footer');
-
 
 
 
@@ -42,8 +45,45 @@ function removeNav(nav) {
     }
 }
 
+// Header Title
+const title = 'Welcome to my portfolio page'
+const titleArr = title.split('')
+let indexes = []
 
 
+for (let i = 0; i < titleArr.length; i++) {
+
+    if (titleArr[i] === titleArr[i]) {
+        indexes.push(i)
+        console.log();
+    }
+
+
+    (function (i) {
+        setTimeout(() => {
+
+            const letter = document.createElement('h1')
+            letter.classList.add('header-title-letter')
+
+
+            if (i < 14) {
+                letter.innerHTML += titleArr[i]
+                arrOne.appendChild(letter);
+            } else {
+                letter.innerHTML += titleArr[i]
+                arrTwo.appendChild(letter);
+            }
+
+            if (letter.innerHTML === ' ') {
+                letter.style.margin = '0 20px 0 0'
+            }
+
+
+        }, 60 * i);
+    })(i)
+
+
+}
 
 
 // Animate DOM elements
@@ -105,9 +145,6 @@ function showAwardsElements(el) {
 }
 
 
-
-
-
 // Logos
 const speed = 1.5;
 let logosArr = [
@@ -157,10 +194,6 @@ animateLogos();
 
 
 
-
-
-
-
 // Contact Form 
 
 input.forEach((el) => {
@@ -185,8 +218,6 @@ message.addEventListener('blur', e => {
 
 
 
-
-
 // Event listeners 
 
 // DOM el
@@ -204,9 +235,13 @@ window.addEventListener('scroll', () => {
 // Navbar
 window.onload = () => {
     navLogo.classList.add('show');
+    social.classList.add('show');
     navUl.classList.add('show');
     navMobile.classList.add('show');
     switchTheme.classList.add('show');
+    setTimeout(() => {
+        homeBtn.classList.add('show');
+    }, 1500);
 }
 
 window.addEventListener('scroll', () => {
@@ -220,7 +255,6 @@ window.addEventListener('scroll', () => {
     }
 
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-
 
 }, false);
 

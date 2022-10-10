@@ -1,6 +1,6 @@
-const switchMode = document.querySelector('.switch-mode');
-const lightMode = document.querySelector('.fa-sun');
-const darkMode = document.querySelector('.fa-moon');
+const switchMode = document.querySelector('.switch-theme');
+const switchButton = document.querySelector('.theme-input');
+
 
 
 
@@ -28,28 +28,23 @@ function setLightTheme() {
 
 
 function setThemeInLocalStorage() {
-    if (lightMode.className === 'fa-solid fa-sun') {
+    if (switchButton.className === 'theme-input switch-sun') {
         localStorage.setItem('theme', 'light')
 
 
     } else {
         localStorage.setItem('theme', 'dark')
     }
-};
+}
 
 function setTheme() {
     if (localStorage.getItem('theme') === 'light') {
-        lightMode.classList.remove('switch-moon');
-        darkMode.classList.remove('switch-sun');
         setLightTheme();
-
-
+        switchButton.classList.add('switch-sun')
 
     } else if (localStorage.getItem('theme') === 'dark') {
-        lightMode.classList.add('switch-moon');
-        darkMode.classList.add('switch-sun');
         setDarkTheme();
-
+        switchButton.classList.remove('switch-sun')
     }
 }
 
@@ -58,9 +53,7 @@ setTheme();
 
 // Switch Theme Mode
 switchMode.addEventListener('click', () => {
-
-    lightMode.classList.toggle('switch-moon');
-    darkMode.classList.toggle('switch-sun');
+    switchButton.classList.toggle('switch-sun')
     setThemeInLocalStorage();
     setTheme();
 

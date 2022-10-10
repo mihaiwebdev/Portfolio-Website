@@ -18,17 +18,22 @@
 
     <!-- HOME - PAGE -->
     <header id="header-home" class="header-home">
-
         <nav class="navbar ">
             <div class="nav-container">
                 <div class="logo">
                     <a href="#"><img src="images/mslogored.png" alt=""></a>
                 </div>
-
-                <div class="switch-mode ">
-                    <i class="fa-solid fa-sun "></i>
-                    <i class="fa-solid fa-moon"></i>
+                <div class="switch-theme">
+                    <input class="theme-input" type="radio">
                 </div>
+                <div class="social">
+                    <a href="https://github.com/mihaiwebdev" target="_blank"><i
+                            class="fa-brands fa-github fa-2x"></i></a>
+
+                    <a href="https://www.linkedin.com/in/mihai-sava-517534242" target="_blank"><i
+                            class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+
                 <ul class="nav-ul">
                     <li><a href="#header-home" class="nav-li">Home</a> </li>
                     <li><a href="#about" class="nav-li">About</a> </li>
@@ -50,27 +55,29 @@
 
         </nav>
 
-
-
-        <div class="container">
+        <div class="container header-container">
+            <canvas id="canvas1"></canvas>
             <div class="header-content">
-                <h1> I am Mihai, Front-End <span class="txt-type" data-wait="2000"
-                        data-words='["Developer", "Developer", "Developer" ]'></span>
-                </h1>
 
-                <button> <a href="#work" class="home-btn">View My Work<i class="fa-solid fa-chevron-right"></i>
-                    </a></button>
+                <div class="header-title">
+                    <div class="header-arr arr-one"></div>
+                    <div class="header-arr arr-two"></div>
+                </div>
+                <button class="home-button"> <a href="#work" class="home-btn "><span>View My Work<i
+                                class="fa-solid fa-chevron-right"></i></span>
+                    </a>
 
             </div>
+
         </div>
-        </div>
+
     </header>
 
 
 
     <!-- WORK - PAGE -->
     <section id="work">
-        <div class="container">
+        <div class="work-container">
             <div class="gallery">
                 <div id="work-heading" class="work-heading">
                     <h2 class="section-tittle">MY WORK</h2>
@@ -78,20 +85,43 @@
                     <p class="lead">Checkout Some of My Projects</p>
 
                 </div>
+                <div class='desktop-text'>
+                    <small>--Hover on the image for website link-</small>
+                </div>
                 <div class="mob-text">
-                    <small>--Touch the image to flip--</small>
+                    <small>--Touch the image for website link-</small>
                 </div>
                 <div class="items">
+                    <div class="item ">
+                        <div class="inner-card">
+                            <div class="item-image work-4">
+                            </div>
+                            <div class="item-text">
+                                <div class="item-text-wrap">
+                                    <p>
+                                        React web application - search github users and display their info.
+                                        Styled with tailwindCSS and daisyui plugin.
+
+                                    </p>
+                                    <a href="https://github.com/mihaiwebdev/Github-Users-Finder" target="=_blank">Source
+                                        Code</a>
+                                    <br>
+                                    <a href="https://github-searchusers.vercel.app/" target="_blank">
+                                        Navigate the Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="item ">
                         <div class="inner-card">
                             <div class="item-image work-3">
                             </div>
                             <div class="item-text">
                                 <div class="item-text-wrap">
-                                    <p>Landing page for a shopping mall app, CSS heavy, animation added with JavaScript,
-                                        responsive for all devices, made
-                                        it
-                                        pixel perfect after a figma file. <br> <small> simplaq website clone.</small>
+                                    <p>Landing page for a shopping mall app created with plain Html, Css and
+                                        Javascript. <br> <small>created after simplaq figma files.</small>
                                     </p>
                                     <a href="https://github.com/mihaiwebdev/Shopping-website" target="=_blank">Source
                                         Code</a>
@@ -104,25 +134,30 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="item ">
                         <div class="inner-card">
-                            <div class="item-image work-4">
-                            </div>
-                            <div class="item-text">
-                                <div class="item-text-wrap">
-                                    <p> Frontend Bootcamp landing page made with Bootstrap 5.
+                            <div class="item-image work-5">
 
-                                    </p>
-                                    <a href="https://github.com/mihaiwebdev/Frontend-Bootcamp-" target="=_blank">Source
+                            </div>
+                            <div class="item-text ">
+                                <div class="item-text-wrap">
+                                    <p>React web application where you can create an account and list your house for
+                                        sale or
+                                        rent, or to explore other houses.</p>
+                                    <a href="https://github.com/mihaiwebdev/House-Marketplace" target="=_blank">Source
                                         Code</a>
                                     <br>
-                                    <a href="https://mihaiwebdev.github.io/Frontend-Bootcamp-/" target="_blank">
+                                    <a href="https://houses-marketplace.vercel.app/" target="_blank">
                                         Navigate the Website
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+
                     <div class="item ">
                         <div class="inner-card">
                             <div class="item-image work-1">
@@ -130,7 +165,7 @@
                             </div>
                             <div class="item-text ">
                                 <div class="item-text-wrap">
-                                    <p>Manage Landing Page - Made with tailwindCSS, responsive for all devices.</p>
+                                    <p>Manage Landing Page - styled with tailwindCSS</p>
                                     <a href="https://github.com/mihaiwebdev/Manage-Landing-Page-"
                                         target="=_blank">Source Code</a>
                                     <br>
@@ -141,7 +176,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="item ">
                         <div class="inner-card">
                             <div class="item-image work-2">
@@ -149,17 +183,38 @@
                             </div>
                             <div class="item-text">
                                 <div class="item-text-wrap">
-                                    <p>Responsive blog page with space news made with plain Html and Css.</p>
-                                    <a href="https://github.com/mihaiwebdev/Space-News-Website" target="=_blank">Source
+                                    <p>Space tourism website - created with HTML, JavaScript and styled with
+                                        Sass. </p>
+                                    <a href="https://github.com/mihaiwebdev/Space-Tourism" target="=_blank">Source
                                         Code</a>
                                     <br>
-                                    <a href="https://mihaiwebdev.github.io/Space-News-Website/" target="_blank">
+                                    <a href="https://gospacetourism.netlify.app/" target="_blank">
                                         Navigate the Website
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="item ">
+                        <div class="inner-card">
+                            <div class="item-image work-6">
+
+                            </div>
+                            <div class="item-text ">
+                                <div class="item-text-wrap">
+                                    <p>Breakout game where you control a paddle with the arrow keys to bounce a ball up
+                                        to break bricks. This app uses the HTML5 canvas element and API</p>
+                                    <a href="https://github.com/mihaiwebdev/Breakout-Game" target="=_blank">Source
+                                        Code</a>
+                                    <br>
+                                    <a href="https://mihaiwebdev.github.io/Breakout-Game/" target="_blank">
+                                        Navigate the Website
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -185,12 +240,17 @@
 
                 <div class="description">
                     <h3>YOUR PROJECT IS IN SAFE HANDS</h3>
-                    <p> I am a front end developer, specialized in HTML, CSS, and JavaScript.
-                        I have experience with CSS preprocesssor SASS, and the frameworks Bootstrap and Tailwind Css.
-                        I'm a perfectionist and hard working person, I'm focused on the details and problem solving, I
-                        like learning new things and I'm
-                        passionate about technology. Let's create your website together, making it an epic one.
-                        I'm excited for new challanges and to meet new people.
+                    <p> Hi there, I am Mihai, front end web developer, specializing in JavaScript.
+                        I have developed several modern, user friendly websites from scratch, but also, I can manage
+                        and update existing projects, or debug them.
+
+                        I am confident with my talent and knowledge which I achieved working on many projects,
+                        and continuously learning.I would be happy to offer my experience and transform your ideas into
+                        the best possible product suited to your preferences and needs.
+
+                        So, if you're looking for a motivated developer to take the weight of your project
+                        off your shoulders and work closely with you to get the job done right,
+                        then shoot me a message down below on the contact form or email me at 1mihaisava1@gmail.com !
                     </p>
                 </div>
             </div>
@@ -221,7 +281,8 @@
                 <div class="award">
                     <i class="fas fa-award fa-2x"></i>
                     <h3>20 Vanilla JavaScript Projects</h3>
-                    <a href="#">
+                    <a href="https://www.udemy.com/certificate/UC-c201df7a-da5e-49fa-8862-c1f36dcaaebd/"
+                        target="_blank">
                         Udemy Certificate
                     </a>
                 </div>
@@ -242,20 +303,17 @@
 
                     <img src="./images/jsnewp1.png" class=" js" alt="JavaScript">
 
-                    <!-- <img src="./images/react.png" class="react" alt="React"> -->
-
-                    <img src="./images/bootstrap.png" class=" bootstrap" alt="Bootstrap">
+                    <img src="./images/react.png" class="react" alt="React">
 
                     <img src="./images/tailwindcss.png" class="tailwind" alt="Tailwind">
 
-                    <img src="./images/git.png" class="git" alt="GIT">
-
-                    <img src="./images/github.png" class="github" alt="Github">
-
-                    <img src="./images/photoshop.png" class=" photoshop" alt="Photoshop">
+                    <img src="./images/daisy.png" class="daisyui" alt="daisyui">
 
                     <img src="./images/sassgood.png" alt="Sass" class="sass">
 
+                    <img src="./images/bootstrap.png" class=" bootstrap" alt="Bootstrap">
+
+                    <img src="./images/github.png" class="github" alt="Github">
 
                 </div>
 
@@ -276,15 +334,16 @@
 
             <form name="contact" method="POST" data-netlify="true" id="form">
                 <div class="name-box">
-                    <input type="text" name="name" id="name" class="name" placeholder="Name" required>
+                    <input type="text" name="name" id="name" class="name form-input" placeholder="Name" required>
                     <label for="name" class="label">Name</label>
                 </div>
                 <div class="email-box">
-                    <input type="email" name="email" id="email" class="email" placeholder="Email" required>
+                    <input type="email" name="email" id="email" class="email form-input" placeholder="Email" required>
                     <label for="email" class="label">Email</label>
                 </div>
                 <div class="subject-box">
-                    <input type="text" name="subject" id="subject" class="subject" placeholder="Subject" required>
+                    <input type="text" name="subject" id="subject" class="subject form-input" placeholder="Subject"
+                        required>
                     <label for="subject" class="label">Subject</label>
                 </div>
                 <div class="message-box">
@@ -325,12 +384,9 @@
         </div>
     </footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="./js/typewriter.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/theme.js"></script>
+    <script src="./js/particleText.js"></script>
 
 </body>
 
