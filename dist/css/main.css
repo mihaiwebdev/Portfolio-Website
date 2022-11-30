@@ -1661,15 +1661,18 @@ body {
         transition: transform 0.5s ease-out;
         text-align: center;
         list-style: none;
-
+        
     }
 
     .mobile-ul.show {
         transform: translateX(0);
     }
 
+    .mobile-ul li:first-of-type {
+        margin-top: 30px;
+    }
     .mobile-ul li {
-        padding: 20px;
+        padding: 30px;
 
     }
 
@@ -1716,14 +1719,11 @@ body {
 
     .header-content .header-title {
         width: auto;
+        margin-bottom: 20px;
     }
 
     .header-home .header-title {
         padding-left: 0px;
-    }
-
-    .header-title-letter {
-        font-size: 3rem;
     }
 
     .header-content .home-button {
@@ -1767,10 +1767,6 @@ body {
     .work-3 {
         background-position: 1px 1px;
 
-    }
-
-    .work-1 {
-        background-position: 1px;
     }
 
     .about-heading h2 {
@@ -1940,7 +1936,4 @@ body {
         margin-top: 0px;
     }
 
-    .header-title-letter {
-        font-size: 2.5rem;
-    }
 }
