@@ -20,6 +20,7 @@ const mouse = {
 setTimeout(() => speedToConnect = 10, 1500)
 
 if (canvas.width < 630) {
+
     adjustY = 4;
     adjustX = 2
     ctx.fillStyle = 'white';
@@ -27,15 +28,7 @@ if (canvas.width < 630) {
     ctx.fillText('hi,', 0, 18);
     mouse.x = -500
     mouse.y = 500
-    window.addEventListener('touchmove', (e) => {
-        mouse.x = e.changedTouches[0].clientX
-        mouse.y = e.changedTouches[0].clientY - 88
 
-    })
-    window.addEventListener('touchend', (e) => {
-        mouse.x = -500
-        mouse.y = 500
-    })
 
 } else {
     window.addEventListener('mousemove', (e) => {

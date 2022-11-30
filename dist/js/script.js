@@ -1,6 +1,5 @@
-const arrOne = document.querySelector('.arr-one')
-const arrTwo = document.querySelector('.arr-two')
-const homeBtn = document.querySelector('.header-content')
+const headerContent = document.querySelector('.header-content');
+const homeBtn = document.querySelector('.home-btn');
 const workHeading = document.querySelector('.work-heading');
 const workTitle = document.querySelector('.section-title');
 const lead = document.querySelector('.lead');
@@ -8,6 +7,8 @@ const workDiv = document.querySelector('.items');
 const workItems = document.querySelectorAll('.item');
 const aboutHeading = document.querySelector('.about-heading');
 const aboutA = document.querySelector('.about-a');
+const readMore = document.getElementById('read-more-btn');
+const moreText = document.getElementById('desc-sec-p');
 const educationTitle = document.querySelector('.about-b-title');
 const awards = document.querySelectorAll('.award');
 const aboutC = document.querySelector('.about-c');
@@ -44,46 +45,6 @@ function removeNav(nav) {
         mobileUl.classList.remove('show')
         hamburger.classList.toggle('close');
     }
-}
-
-// Header Title
-const title = 'Welcome to my portfolio page'
-const titleArr = title.split('')
-let indexes = []
-
-
-for (let i = 0; i < titleArr.length; i++) {
-
-    if (titleArr[i] === titleArr[i]) {
-        indexes.push(i)
-        console.log();
-    }
-
-
-    (function (i) {
-        setTimeout(() => {
-
-            const letter = document.createElement('h1')
-            letter.classList.add('header-title-letter')
-
-
-            if (i < 14) {
-                letter.innerHTML += titleArr[i]
-                arrOne.appendChild(letter);
-            } else {
-                letter.innerHTML += titleArr[i]
-                arrTwo.appendChild(letter);
-            }
-
-            if (letter.innerHTML === ' ') {
-                letter.style.margin = '0 20px 0 0'
-            }
-
-
-        }, 60 * i);
-    })(i)
-
-
 }
 
 
@@ -241,7 +202,7 @@ window.onload = () => {
 
     switchTheme.classList.add('show');
     setTimeout(() => {
-        homeBtn.classList.add('show');
+        headerContent.classList.add('show');
     }, 1500);
 }
 
@@ -269,7 +230,6 @@ navMobile.addEventListener('click', (e) => {
     } else {
         mobileUl.classList.remove('show')
     }
-    console.log(e.target)
 })
 
 
@@ -286,6 +246,10 @@ workDiv.addEventListener('click', (e) => {
 
 })
 
+readMore.addEventListener('click', () => {
+    moreText.style.display = 'block';
+    readMore.style.display = 'none';
+})
 
 
 
