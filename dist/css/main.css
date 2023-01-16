@@ -656,11 +656,11 @@ body {
 }
 
 .work-1 {
-    background: url('../images/support-desk.jpg')no-repeat center center /cover;
+    background: url('../images/network.jpg')no-repeat center 100% /cover;
 }
 
 .work-2 {
-    background: url('../images/space_tourism.jpg')no-repeat center center /cover;
+    background: url('../images/proshop1.jpg')no-repeat center center /cover;
 
 }
 
@@ -996,6 +996,24 @@ body {
     margin-bottom: 80px;
     text-align: center;
     padding: 0 150px;
+}
+
+.award-logo {
+    width: 60px;
+    height: 50px;
+}
+
+.fcc-logo {
+    width: 45px;
+    height: 40px;
+    border-radius: 10px;
+    background: #000;
+    padding: 5px 3px;
+}
+
+.udemy-logo {
+    width: 45px;
+    height: 40px;
 }
 
 .award {
